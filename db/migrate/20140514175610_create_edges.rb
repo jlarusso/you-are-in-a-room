@@ -1,8 +1,9 @@
 class CreateEdges < ActiveRecord::Migration
   def change
     create_table :edges do |t|
-      t.integer :node_id
-      t.integer :link_id
+      t.integer :from_id
+      t.integer :to_id
+      t.string :name
 
       t.timestamps
     end
