@@ -1,5 +1,6 @@
 class Player < ActiveRecord::Base
   belongs_to :node
+  has_many :items, as: :owner
 
   # Check if current node is connected to target node
   # Move player to target node

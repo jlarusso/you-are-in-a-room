@@ -16,3 +16,7 @@ n3.connect n6
 
 Player.create(node_id: n1.id)
 
+i = Item.create(name: "Box of cookies")
+i.owner = n5
+i.save
+
