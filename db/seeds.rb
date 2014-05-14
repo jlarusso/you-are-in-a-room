@@ -14,3 +14,5 @@ n2.connect n5
 n2.connect n3
 n3.connect n6
 
+Player.create(node_id: n1.id)
+
