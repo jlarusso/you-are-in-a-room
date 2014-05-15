@@ -13,4 +13,14 @@ class Player < ActiveRecord::Base
       puts "Cant move there"
     end
   end
+
+  def pick_up(item_name)
+    item = self.node.items.where(name: item_name.downcase).first
+    if item
+      item.owner = self
+      item.save
+    else
+      puts "You cant find the #{item_name}"
+    end
+  end
 end
