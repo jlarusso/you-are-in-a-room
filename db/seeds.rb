@@ -1,6 +1,3 @@
-Node.destroy_all
-Edge.destroy_all
-
 n1 = Node.create(name: 'Back of the room')
 n2 = Node.create(name: 'Front of the room')
 n3 = Node.create(name: 'Elevators')

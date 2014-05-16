@@ -1,3 +1,5 @@
+require 'rubygems'
+
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
@@ -17,23 +19,25 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
+  require Rails.root.join('db', 'test.rb')
   config.include FactoryGirl::Syntax::Methods
-
   config.use_transactional_fixtures = false
   config.order = "random"
 
-  DatabaseCleaner.strategy = :transaction
-
   config.before(:suite) do
-    DatabaseCleaner.clean_with :truncation
-    require Rails.root.join('db', 'test.rb')
+    begin
+      DatabaseCleaner.start
+      FactoryGirl.lint
+    ensure
+      DatabaseCleaner.clean
+    end
   end
 
-  config.before do
-    DatabaseCleaner.start
-  end
+#   config.before do
+#     DatabaseCleaner.start
+#   end
 
-  config.after do
-    DatabaseCleaner.clean
-  end
+#   config.after do
+#     DatabaseCleaner.clean
+#   end
 end

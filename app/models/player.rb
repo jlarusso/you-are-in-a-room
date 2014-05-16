@@ -9,8 +9,7 @@ class Player < ActiveRecord::Base
       self.node = to_node
       save!
     else
-      #TODO: hanlde this
-      puts "Cant move there"
+      raise ActiveRecord::RecordNotFound
     end
   end
 
