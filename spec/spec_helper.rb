@@ -19,25 +19,22 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
-  require Rails.root.join('db', 'test.rb')
   config.include FactoryGirl::Syntax::Methods
   config.use_transactional_fixtures = false
   config.order = "random"
 
   config.before(:suite) do
-    begin
-      DatabaseCleaner.start
-      FactoryGirl.lint
-    ensure
-      DatabaseCleaner.clean
-    end
+    DatabaseCleaner.clean_with :truncation
+    DatabaseCleaner.clean
+    require Rails.root.join('db', 'test.rb')
   end
 
-#   config.before do
-#     DatabaseCleaner.start
-#   end
+  config.before do
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.start
+  end
 
-#   config.after do
-#     DatabaseCleaner.clean
-#   end
+  config.after do
+    DatabaseCleaner.clean
+  end
 end
