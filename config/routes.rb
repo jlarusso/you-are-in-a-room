@@ -1,3 +1,3 @@
 YouAreInARoom::Application.routes.draw do
-  root 'game#prompt'
+  root 'game#game'
 end

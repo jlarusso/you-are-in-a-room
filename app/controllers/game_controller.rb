@@ -1,4 +1,4 @@
 class GameController < ApplicationController
-  def prompt
+  def game
   end
 end
