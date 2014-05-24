@@ -1,5 +1,6 @@
 class @Dispatcher
   constructor: ->
+    @$container = $('#output')
     url = "localhost:3000/websocket"
 
     @connection = new WebSocketRails(url, true)
@@ -7,9 +8,9 @@ class @Dispatcher
 
   # Bindings receive messages from a websockets connection
   _bindEvents: =>
-    @connection.bind 'send_output', @_sendOutput
+    @connection.bind 'current_room', @_receiveCurrentRoom
 
   # Events execute an action when a binding is activated
-  _sendOutput: (message) =>
-    console.log message
+  _receiveCurrentRoom: (message) =>
+    @$container.append("<p>#{message.output}</p>")
 

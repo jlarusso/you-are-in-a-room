@@ -17,7 +17,14 @@ class WebsocketController < WebsocketRails::BaseController
   end
 
 
-  def send_output
-    broadcast_message :send_output, { output: "testing" }
+  def get_current_room
+    set_current_node
+    broadcast_message :current_room, { output: @node.description }
+  end
+
+  private
+
+  def set_current_node
+    @node = Player.first.node
   end
 end

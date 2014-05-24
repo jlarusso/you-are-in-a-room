@@ -4,5 +4,5 @@ WebsocketRails::EventMap.describe do
   subscribe :client_disconnected, 'websocket#client_disconnected'
 
   # Game
-  subscribe :send_output, 'websocket#send_output'
+  subscribe :get_current_room, 'websocket#get_current_room'
 end

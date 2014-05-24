@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524171549) do
+ActiveRecord::Schema.define(version: 20140524182953) do
 
   create_table "edges", force: true do |t|
     t.integer  "from_id"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20140524171549) do
     t.string   "owner_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "description"
   end
 
   create_table "nodes", force: true do |t|

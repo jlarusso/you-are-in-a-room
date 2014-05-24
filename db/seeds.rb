@@ -8,7 +8,8 @@ File.open(nodes_path) do |file|
   YAML.load_documents(file) do |hash|
     hash.keys.sort.each do |id|
       params = hash[id]
-      Node.create(id: id, name: params['name'])
+      n = Node.create(id: id)
+      n.update_attributes params
     end
   end
 end

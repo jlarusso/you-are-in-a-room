@@ -27,5 +27,5 @@
   name: Dark room
   description: You push the sliding door to the right and enter a dark room that has floor to ceiling electronics. Random flashes of red, yellow, and orange LEDs and the occasional bleep or bloop leaves you in awe of the technological age we all live in.
   surroundings: You can go back to the service <em>elevator</em> from here.
-  notes: stomach should grumble here if hungry
+  # notes: stomach should grumble here if hungry
 
