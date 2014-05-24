@@ -5,4 +5,5 @@ WebsocketRails::EventMap.describe do
 
   # Game
   subscribe :get_current_room, 'websocket#get_current_room'
+  subscribe :submit, 'websocket#submit'
 end

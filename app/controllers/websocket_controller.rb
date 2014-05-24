@@ -4,22 +4,26 @@ class WebsocketController < WebsocketRails::BaseController
 
 
   def client_connected
-    id = params[:uuid]
-    puts "***"
-    puts "Client #{id} connected"
+    puts ""
+    puts "*** Client connected ***"
+    puts ""
   end
 
 
   def client_disconnected
-    id = params[:uuid]
-    puts "***"
-    puts "Client #{id} disconnected"
+    puts ""
+    puts "*** Client disconnected ***"
+    puts ""
   end
 
 
   def get_current_room
     set_current_node
-    broadcast_message :current_room, { output: @node.description }
+    broadcast_message :append_message, @node.description
+  end
+
+  def submit
+    broadcast_message :append_message, message
   end
 
   private
