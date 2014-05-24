@@ -10,23 +10,39 @@ class Parser
       token = tokens[0]
 
       # Plain look
-      if token == 'look'
-        [node.description, node.surroundings]
-      else
-        ["That doesn't make sense."]
+      case token
+      when 'look' then [node.description, node.surroundings]
+      when 'help' then Parser.help
+      else ["That doesn't make sense."]
       end
     else
       verb = tokens.shift
       subject = tokens.join(' ')
-      item = Item.find_local(subject)
 
-      # Action on an item or node
-      if item
-        legal_action = item.action(verb)
-        legal_action ? [legal_action] : ["You can't do that"]
+      # Player move
+      if verb == 'move'
+        to_node = node.find_neighbor(subject)
+        ["You can't move there"] unless Player.first.move_to(to_node)
       else
-        ["You don't see that here"]
+        # Action on an item or node
+        target = Item.find_local(subject)
+        if target
+          legal_action = target.action(verb)
+          legal_action ? [legal_action] : ["You can't do that"]
+        else
+          ["You don't see that here"]
+        end
       end
     end
+  end
+
+  def self.help
+    [
+      "Type <em>look</em> to look at the current room.",
+      "Type <em>move</em> <em>room</em> to enter another room.",
+      "Type a verb and then an object to take some kind of action.",
+      "For example, <em>look phone</em>, will look at your phone.",
+      "To get a list of actions for an item, <em>inspect</em> the item."
+    ]
   end
 end

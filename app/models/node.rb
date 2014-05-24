@@ -10,5 +10,11 @@ class Node < ActiveRecord::Base
     to_nodes << node
     from_nodes << node
   end
+
+  def find_neighbor(name)
+    t = Node.arel_table
+    to_node = Node.where(t[:name].matches("%#{name}")).first
+    to_node if to_nodes.include?(to_node)
+  end
 end
 

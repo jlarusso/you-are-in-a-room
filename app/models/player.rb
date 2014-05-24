@@ -5,11 +5,9 @@ class Player < ActiveRecord::Base
   acts_as_savable :node_id
 
   def move_to(to_node)
-    if node.to_nodes.include?(to_node)
+    if to_node.try('instance_of?', Node) && node.to_nodes.include?(to_node)
       self.node = to_node
       save!
-    else
-      "You cant go there"
     end
   end
 

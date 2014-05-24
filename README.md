@@ -1,0 +1,3 @@
+- Player can move
+- Verb model w/ action identifier
+- Inspect an item
