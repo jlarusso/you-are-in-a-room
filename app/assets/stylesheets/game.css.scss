@@ -1,11 +1,12 @@
 #well {
   position: relative;
   height: 100%;
-  width: 800px;
+  width: 810px;
   margin: 0 auto;
 }
 
 #output {
+  margin-top: 20px;
   position: absolute;
   top: 0;
   right: 0;
@@ -14,8 +15,10 @@
   color: #939694;
   background: #22313F;
   border: solid 3px #34495E;
-  border-top: solid 5px #34495E;
+  border-top: solid 3px #34495E;
   border-bottom: solid 3px midnightblue;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   padding: 20px 0;
   overflow: hidden;
 
