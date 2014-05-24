@@ -19,17 +19,10 @@ class WebsocketController < WebsocketRails::BaseController
 
 
   def get_current_room
-    set_current_node
-    broadcast_message :append_message, @node.description
+    broadcast_message :append_message, Parser.parse('look')
   end
 
   def submit
-    broadcast_message :append_message, message
-  end
-
-  private
-
-  def set_current_node
-    @node = Player.first.node
+    broadcast_message :append_message, Parser.parse(message)
   end
 end

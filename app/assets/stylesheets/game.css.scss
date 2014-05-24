@@ -11,15 +11,44 @@
   right: 0;
   left: 0;
   bottom: 40px;
-  color: lightgrey;
+  color: #939694;
   background: #22313F;
   border: solid 3px #34495E;
   border-top: solid 5px #34495E;
-  border-bottom: solid 1px midnightblue;
+  border-bottom: solid 3px midnightblue;
+  padding: 20px 0;
+  overflow: hidden;
 
   p {
     margin: 5px;
     padding: 0 30px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  p:nth-last-child(1) {
+    color: #D2D7D3;
+    em { color: #89B4EB; }
+  }
+
+  p:nth-last-child(2) {
+    color: #C6C9C7;
+    em { color: #7BA0D2; }
+  }
+
+  p:nth-last-child(3) {
+    color: #B8BBB9;
+    em { color: #7092C0; }
+  }
+
+  p:nth-last-child(4) {
+    color: #ABAFAC;
+    em { color: #6889B3; }
+  }
+
+  p:nth-last-child(5) {
+    color: #A5A8A6;
+    em { color: #72859B; }
   }
 }
 
