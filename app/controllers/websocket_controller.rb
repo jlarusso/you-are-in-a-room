@@ -7,6 +7,7 @@ class WebsocketController < WebsocketRails::BaseController
     puts ""
     puts "*** Client connected ***"
     puts ""
+    get_current_room
   end
 
 
