@@ -2,12 +2,20 @@
   name: 'plant'
   owner_id: 1
   owner_type: Node
+  description: 
 -
   name: 'phone'
   owner_id: 1
   owner_type: Node
+  description: 
 -
   name: 'plant'
   owner_id: 2
   owner_type: Node
+  description: 
+-
+  name: 'bicycle'
+  owner_id: 4
+  owner_type: Node
+  description: You see a red bicycle that has a helmet hanging by the strap from one of the hanldebars. The neon reflector tape on the helmet nearly blinds you.
 

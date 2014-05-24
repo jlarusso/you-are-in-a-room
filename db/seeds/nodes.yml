@@ -12,14 +12,20 @@
   surroundings: A small round <em>button</em> on a metal panel beckons you with a down arrow. A large tropical <em>plant</em> partially obscures a <em>phone booth</em>.
 4:
   name: Service elevator
-  description:
-  surroundings:
+  description: You walk down the back hallway. You can see some shelves with various office supplies and a <em>bicycle</em>.
+  surroundings: On one side of the hallway, there is a <em>dark room</em> filled with flickering lights. On the other, a service <em>elevator</em>.
+
 5:
   name: Kitchen
-  description:
+  description: To your right, a wall-mounted television presents Anthony Bourdain quietly observing the slaughter of a pig in Tuscany, while on your left a few employees eat their lunch around a large vase of beautiful flowers.
   surroundings: On a metal ledge, there is a jug of <em>pretzels</em>. Behind you lies the <em>front</em> of the room, where you came from.
 6:
   name: Phone booth
-  description:
-  surroundings:
+  description: You pull open a heavy glass door to enter a small semi-soundproof room. The perfect spot to make a phone call, if you needed to.
+  surroundings: The only place to go from here is back to the <em>elevators</em>.
+7:
+  name: Dark room
+  description: You push the sliding door to the right and enter a dark room that has floor to ceiling electronics. Random flashes of red, yellow, and orange LEDs and the occasional bleep or bloop leaves you in awe of the technological age we all live in.
+  surroundings: You can go back to the service <em>elevator</em> from here.
+  notes: stomach should grumble here if hungry
 
