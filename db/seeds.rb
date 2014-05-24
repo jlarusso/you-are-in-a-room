@@ -1,20 +1,40 @@
-n1 = Node.create(name: 'Back of the room')
-n2 = Node.create(name: 'Front of the room')
-n3 = Node.create(name: 'Elevators')
-n4 = Node.create(name: 'Service elevator')
-n5 = Node.create(name: 'Kitchen')
-n6 = Node.create(name: 'Phone booth')
+# seeds.rb
+puts ""
 
-n1.connect n2
-n1.connect n4
-n2.connect n5
-n2.connect n3
-n3.connect n6
+# Nodes
+nodes_path = Rails.root.join('db','seeds','nodes.yml')
+puts "-> Creating nodes"
+File.open(nodes_path) do |file|
+  YAML.load_documents(file) do |hash|
+    hash.keys.sort.each do |id|
+      params = hash[id]
+      Node.create(id: id, name: params['name'])
+    end
+  end
+end
 
-Player.create(node_id: n1.id)
+# Edges
+edges_path = Rails.root.join('db','seeds','edges.yml')
+puts "-> Creating edges"
+File.open(edges_path) do |file|
+  YAML.load_documents(file).each do |connection|
+    connection.each do |edge|
+      Node.find(edge[0]).connect Node.find(edge[1])
+    end
+  end
+end
 
-# TODO: ensure that item names are always downcase
-i = Item.create(name: "box of cookies")
-i.owner = n5
-i.save
+# Player
+puts "-> Creating player"
+Player.create(id: 1, node_id: 1)
 
+# Items
+items_path = Rails.root.join('db','seeds','items.yml')
+puts "-> Creating items"
+File.open(items_path) do |file|
+  YAML.load_documents(file).each do |item|
+    Item.create(item)
+  end
+end
+
+puts ""

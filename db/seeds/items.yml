@@ -1,0 +1,5 @@
+-
+  name: 'plant'
+  owner_id: 1
+  owner_type: Node
+

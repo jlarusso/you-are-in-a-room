@@ -1,0 +1,24 @@
+1:
+  name: Back of the room
+  connect:
+    - 2
+    - 4
+2:
+  name: Front of the room
+  connect:
+    - 3
+    - 5
+3:
+  name: Elevators
+  connect:
+    - 6
+4:
+  name: Service elevator
+  connect: []
+5:
+  name: Kitchen
+  connect: []
+6:
+  name: Phone booth
+  connect: []
+

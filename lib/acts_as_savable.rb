@@ -5,8 +5,7 @@ module ActsAsSavable
   end
 
   module ClassMethods
-    def acts_as_savable(options = {})
-      binding.pry
+    def acts_as_savable(*fields)
     end
   end
 end
