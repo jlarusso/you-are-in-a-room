@@ -1,24 +1,25 @@
 1:
   name: Back of the room
-  connect:
-    - 2
-    - 4
+  description: You are in a room on the 10th floor of an office building. A few dozen people work quietly around you with their headphones on.
+  surroundings: There is an aisle that leads to the <em>front</em> of the room. Further down, you can see a large palm tree towering over elevator doors.\n There is a <em>hallway</em> that leads to a service elevator in the back of the office.\n There is a <em>plant</em> and a <em>laptop</em> on your desk.\n Your <em>phone</em> is balancing on the edge of your <em>laptop</em>.
 2:
   name: Front of the room
-  connect:
-    - 3
-    - 5
+  description: You see more desks with more people quietly working. The smell of fresh watermelon wafts from the kitchen.
+  surroundings: The <em>kitchen</em> is a few steps to your left, while the <em>elevators</em> are a little further down the aisle.
 3:
   name: Elevators
-  connect:
-    - 6
+  description: Three large steel elevators stand before you acting like blurry mirrors.
+  surroundings: A small round <em>button</em> on a metal panel beckons you with a down arrow. A large tropical <em>plant</em> partially obscures a <em>phone booth</em>.
 4:
   name: Service elevator
-  connect: []
+  description:
+  surroundings:
 5:
   name: Kitchen
-  connect: []
+  description:
+  surroundings: On a metal ledge, there is a jug of <em>pretzels</em>. Behind you lies the <em>front</em> of the room, where you came from.
 6:
   name: Phone booth
-  connect: []
+  description:
+  surroundings:
 

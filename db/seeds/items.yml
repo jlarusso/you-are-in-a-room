@@ -2,4 +2,12 @@
   name: 'plant'
   owner_id: 1
   owner_type: Node
+-
+  name: 'phone'
+  owner_id: 1
+  owner_type: Node
+-
+  name: 'plant'
+  owner_id: 2
+  owner_type: Node
 
