@@ -22,7 +22,7 @@ class Parser
       # Player move
       if verb == 'move'
         to_node = node.find_neighbor(subject)
-        ["You can't move there"] unless Player.first.move_to(to_node)
+        Player.first.move_to(to_node) || ["You can't move there"]
       else
         # Action on an item or node
         target = Item.find_local(subject)
