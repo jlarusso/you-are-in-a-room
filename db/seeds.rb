@@ -33,8 +33,25 @@ Player.create(id: 1, node_id: 1)
 items_path = Rails.root.join('db','seeds','items.yml')
 puts "-> Creating items"
 File.open(items_path) do |file|
-  YAML.load_documents(file).each do |item|
-    Item.create(item)
+  YAML.load_documents(file).each do |hash|
+    hash.keys.sort.each do |id|
+      params = hash[id]
+      i = Item.create(id: id)
+      i.update_attributes params
+    end
+  end
+end
+
+# Verbs
+verbs_path = Rails.root.join('db','seeds','verbs.yml')
+puts "-> Creating verbs"
+File.open(verbs_path) do |file|
+  YAML.load_documents(file).each do |hash|
+    hash.keys.sort.each do |id|
+      params = hash[id]
+      v = Verb.create(id: id)
+      v.update_attributes params
+    end
   end
 end
 

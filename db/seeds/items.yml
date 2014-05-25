@@ -1,19 +1,19 @@
--
+1:
   name: plant
   owner_id: 1
   owner_type: Node
   description: a nice plant
--
+2:
   name: phone
   owner_id: 1
   owner_type: Node
   description: an iphone
--
+3:
   name: plant
   owner_id: 2
   owner_type: Node
   description: a large plant
--
+4:
   name: bicycle
   owner_id: 4
   owner_type: Node

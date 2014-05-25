@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140524182953) do
+ActiveRecord::Schema.define(version: 20140525172223) do
 
   create_table "edges", force: true do |t|
     t.integer  "from_id"
@@ -39,6 +39,15 @@ ActiveRecord::Schema.define(version: 20140524182953) do
 
   create_table "players", force: true do |t|
     t.integer  "node_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "verbs", force: true do |t|
+    t.string   "name"
+    t.string   "action"
+    t.text     "output_text"
+    t.integer  "item_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,0 +1,6 @@
+1:
+  name: water
+  action: water_plant
+  output_text: The soil sucks up the water greedily.
+  item_id: 1
+
