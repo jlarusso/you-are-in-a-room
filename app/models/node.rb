@@ -16,5 +16,17 @@ class Node < ActiveRecord::Base
     to_node = Node.where(t[:name].matches("%#{name}")).first
     to_node if to_nodes.include?(to_node)
   end
+
+  def items_list
+    if items.empty?
+      ""
+    else
+      "There are some items here: #{items.map(&:name).join(', ')}"
+    end
+  end
+
+  def room_description
+    [description, surroundings, items_list]
+  end
 end
 

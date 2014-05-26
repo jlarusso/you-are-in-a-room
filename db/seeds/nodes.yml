@@ -1,7 +1,7 @@
 1:
   name: Back of the room
   description: You are in a room on the 10th floor of an office building. A few dozen people work quietly around you with their headphones on.
-  surroundings: There is an aisle that leads to the <em>front of the room</em>. Further down, you can see a large palm tree towering over elevator doors.<br /> There is a <em>hallway</em> that leads to a service elevator in the back of the office.<br /> There is a <em>plant</em> and a <em>laptop</em> on your desk.<br /> Your <em>phone</em> is balancing on the edge of your <em>laptop</em>.
+  surroundings: There is an aisle that leads to the <em>front of the room</em>. Further down, you can see a large palm tree towering over elevator doors.<br /> There is a <em>hallway</em> that leads to a service elevator in the back of the office.
 2:
   name: Front of the room
   description: You see more desks with more people quietly working. The smell of fresh watermelon wafts from the kitchen.
@@ -9,10 +9,10 @@
 3:
   name: Elevators
   description: Three large steel elevators stand before you acting like blurry mirrors.
-  surroundings: A small round <em>button</em> on a metal panel beckons you with a down arrow. A large tropical <em>plant</em> partially obscures a <em>phone booth</em>.
+  surroundings: A small round <em>button</em> on a metal panel beckons you with a down arrow.
 4:
   name: Service elevator
-  description: You walk down the back hallway. You can see some shelves with various office supplies and a <em>bicycle</em>.
+  description: You walk down the back hallway. You can see some shelves with various office supplies.
   surroundings: On one side of the hallway, there is a <em>dark room</em> filled with flickering lights. On the other, a service <em>elevator</em>.
 
 5:
@@ -21,7 +21,7 @@
   surroundings: On a metal ledge, there is a jug of <em>pretzels</em>. Behind you lies the <em>front of the room</em>, where you came from.
 6:
   name: Phone booth
-  description: You pull open a heavy glass door to enter a small semi-soundproof room. The perfect spot to make a phone call, if you needed to.
+  description: You pull open a heavy glass door to enter a small semi-soundproof room. The perfect spot to make a phone call if you needed to.
   surroundings: The only place to go from here is back to the <em>elevators</em>.
 7:
   name: Dark room
