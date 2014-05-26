@@ -30,6 +30,7 @@ class Item < ActiveRecord::Base
   def get
     if gettable
       self.owner = Player.first
+      self.save
       "You got the #{self.name}"
     else
       "You can't get that"
@@ -39,6 +40,7 @@ class Item < ActiveRecord::Base
   def drop
     if gettable
       self.owner = Player.first.node
+      self.save
       "You dropped the #{self.name}"
     else
       "You can't drop that"
