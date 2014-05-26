@@ -25,6 +25,7 @@ class @Dispatcher
   _appendMessage: (messages) =>
     for message in messages
       @$output.append $("<p>#{message}</p>")
+    @$output.append $("<div class='hr'></div>")
     @pruneParagraphs()
     @reScroll()
 

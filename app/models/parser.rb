@@ -38,11 +38,13 @@ class Parser
 
   def self.help
     [
-      "Type <em>look</em> to look at the current room.",
-      "Type <em>move</em> <em>room</em> to enter another room.",
-      "Type a verb and then an object to take some kind of action.",
-      "For example, <em>look phone</em>, will look at your phone.",
-      "To get a list of actions for an item, <em>inspect</em> the item."
+      %Q(
+        Type <em>look</em> to look at the current room.<br />
+        Type <em>move</em> <em>room</em> to enter another room.<br />
+        Type a verb and then an object to take some kind of action.<br />
+        For example, <em>look phone</em>, will look at your phone.<br />
+        To get a list of actions for an item, <em>inspect</em> the item.
+      )
     ]
   end
 end

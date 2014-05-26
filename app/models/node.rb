@@ -26,7 +26,7 @@ class Node < ActiveRecord::Base
   end
 
   def room_description
-    [description, surroundings, items_list]
+    [name, description, surroundings, items_list]
   end
 end
 
