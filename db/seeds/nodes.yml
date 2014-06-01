@@ -11,7 +11,7 @@
   description: Three large steel elevators stand before you acting like blurry mirrors.
   surroundings: A small round <em>button</em> on a metal panel beckons you with a down arrow.
 4:
-  name: Service elevator
+  name: Back corridor
   description: You walk down the back hallway. You can see some shelves with various office supplies.
   surroundings: On one side of the hallway, there is a <em>dark room</em> filled with flickering lights. On the other, a service <em>elevator</em>.
 
@@ -28,4 +28,29 @@
   description: You push the sliding door to the right and enter a dark room that has floor to ceiling electronics. Random flashes of red, yellow, and orange LEDs and the occasional bleep or bloop leaves you in awe of the technological age we all live in.
   surroundings: You can go back to the service <em>elevator</em> from here.
   # notes: stomach should grumble here if hungry
+8:
+  name: Main elevator
+9:
+  name: Service elevator
+10:
+  name: 5th av. 14th st.
+11:
+  name: 5th av. 15th st.
+12:
+  name: 5th av. 16th st.
+13:
+  name: 5th av. 17th st.
+14:
+  name: 5th av. 18th st.
+  # notes: trying to go north from here you get msg of being too tired to walk that far.
+15:
+  name: Between 5th av. and Broadway on 17th st.
+16:
+  name: "Doctor's office"
+17:
+  name: Central park
+18:
+  name: 34th street
+19:
+  name: 42nd street
 
