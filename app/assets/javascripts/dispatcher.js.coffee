@@ -13,9 +13,11 @@ class @Dispatcher
 
   # Limit scroll buffer
   pruneParagraphs: ->
-    extra_count = @$output.find('p').length - 20
-    if extra_count > 0
-      @$output.find('p:first-child').remove() for [1..extra_count]
+    extra_p_count = @$output.find('p').length - 20
+    if extra_p_count > 0
+      @$output.find('p:first-of-type').remove() for [1..extra_p_count]
+    while @$output.find('.hr:first-child').length
+      @$output.find('.hr:first-child').remove()
 
   # Events are triggered on the dispatcher from the websockets connection
   _bindEvents: =>
@@ -24,7 +26,8 @@ class @Dispatcher
   # Execute an action when a binding is activated
   _appendMessage: (messages) =>
     for message in messages
-      @$output.append $("<p>#{message}</p>")
+      if message
+        @$output.append $("<p>#{message}</p>")
     @$output.append $("<div class='hr'></div>")
     @pruneParagraphs()
     @reScroll()

@@ -10,7 +10,7 @@
   name: Elevators
   description: Three large stainless-steel elevators stand before you acting like blurry mirrors.
   # surroundings: A small round <em>button</em> on a metal panel beckons you with a down arrow.
-  surroundings: From here you can go back to the <em>front of the room</em> or through the giant tropical plant into the <em>phone booth</em>.
+  surroundings: From here you can go back to the <em>front of the room</em> or through the giant tropical plant into the <em>phone booth</em>. You can also enter the <em>main elevator</em>.
 4:
   name: Back corridor
   description: You walk down the back hallway. You can see some shelves with various office supplies.
@@ -30,44 +30,44 @@
   # notes: stomach should grumble here if hungry
 8:
   name: Main elevator
-  surroundings: Back to the hallway with the <em>elevators</em>, Exit on the ground floor out onto <em>16th st.</em>.
+  surroundings: Back to the hallway with the <em>elevators</em>, Exit on the ground floor out onto <em>16th st</em>.
 9:
   name: Service elevator
   surroundings: You can go to the <em>back corridor</em>. Or out on the ground floor into the <em>alley</em>.
 10:
   name: 14th st
-  surroundings: You can go to <em>15th st.</em>.
+  surroundings: You can go to <em>15th st</em>.
 11:
   name: 15th st
-  surroundings: You can go to <em>14th st.</em> or <em>16th st.</em>
+  surroundings: You can go to <em>14th st</em> or <em>16th st</em>
 12:
-  name: 16th st.
-  surroundings: You can go to <em>15th st.</em> or <em>17th st.</em>
+  name: 16th st
+  surroundings: You can go to <em>15th st</em> or <em>17th st</em>
 13:
-  name: 17th st.
-  surroundings: You can go to <em>16th st.</em> or <em>18th st.</em> or <em>restaurants</em>.
+  name: 17th st
+  surroundings: You can go to <em>16th st</em> or <em>18th st</em> or <em>restaurants</em>.
 14:
-  name: 18th st.
-  surroundings: You can go to <em>17th st.</em>.
+  name: 18th st
+  surroundings: You can go to <em>17th st</em>.
   # notes: trying to go north from here you get msg of being too tired to walk that far.
   # notes: can get cab here
 15:
   name: Restaurants
-  surroundings: Can go back to <em>17th st.</em>.
+  surroundings: Can go back to <em>17th st</em>.
 16:
   name: "Doctor's office"
-  surroundings: Can go to <em>34th st.</em>.
+  surroundings: Can go to <em>34th st</em>.
 17:
   name: Central park
   surroundings: None
   # notes: once in park, cant leave and end game begins.
 18:
-  name: 34th st.
-  surroundings: Can go to <em>42nd st.</em>.
+  name: 34th st
+  surroundings: Can go to <em>42nd st</em>.
 19:
-  name: 42nd st.
+  name: 42nd st
   surroundings: Can go to <em>central park</em>.
 20:
   name: alley
-  surroundings: You can go to <em>15th st.</em>.
+  surroundings: You can go to <em>15th st</em>.
 
