@@ -1,6 +1,7 @@
 class Player < ActiveRecord::Base
   belongs_to :node
   has_many :items, as: :owner
+  has_many :flags
 
   acts_as_savable :node_id
 

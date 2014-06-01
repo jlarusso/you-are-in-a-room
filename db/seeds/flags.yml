@@ -1,0 +1,12 @@
+1:
+  name: hungry
+  player_id: 1
+  active_text: You are hungry.
+2:
+  name: cant leave office
+  player_id: 1
+  active_text: You have the nagging feeling that you are forgetting something. Maybe you should take care of something before you leave the office.
+3:
+  name: anxious
+  player_id: ~
+  active_text: ~

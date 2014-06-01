@@ -55,4 +55,17 @@ File.open(verbs_path) do |file|
   end
 end
 
+# Flags
+flags_path = Rails.root.join('db','seeds','flags.yml')
+puts "-> Creating flags"
+File.open(flags_path) do |file|
+  YAML.load_documents(file).each do |hash|
+    hash.keys.sort.each do |id|
+      params = hash[id]
+      f = Flag.create(id: id)
+      f.update_attributes params
+    end
+  end
+end
+
 puts ""
