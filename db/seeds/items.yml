@@ -22,4 +22,36 @@
   owner_type: Node
   description: You see a red bicycle that has a helmet hanging by the strap from one of the handlebars. The neon reflector tape on the helmet nearly blinds you.
   gettable: false
+5:
+  name: taxi
+  owner_id: 14
+  owner_type: Node
+  description: You see a yellow cab
+  gettable: false
+6:
+  name: watermelon
+  owner_id: 5
+  owner_type: Node
+  description: A big juicy watermelon- definitely too heavy to carry
+  gettable: false
+7:
+  name: button
+  owner_id: 3
+  owner_type: Node
+  description: Elevator button
+  gettable: false
+8:
+  name: shelves
+  owner_id: 4
+  owner_type: Node
+  description: shelves
+  gettable: false
+  # notes: when shelves are looked, at a new gettable item is created here
+9:
+  name: pretzels
+  owner_id: 5
+  owner_type: Node
+  description: a jug of pretzels
+  gettable: false
+  # edible
 

@@ -1,24 +1,24 @@
 1:
   name: Back of the room
   description: You are in a room on the 10th floor of an office building. A few dozen people work quietly around you with their headphones on.
-  surroundings: There is an aisle that leads to the <em>front of the room</em>. Further down, you can see a large palm tree towering over elevator doors.<br /> There is a <em>hallway</em> that leads to a service elevator in the back of the office.
+  surroundings: There is an aisle that leads to the <em>front of the room</em>. Further down, you can see a large palm tree towering over elevator doors.<br /> You notice a <em>back corridor</em> that leads to a service elevator.
 2:
   name: Front of the room
   description: You see more desks with more people quietly working. The smell of fresh watermelon wafts from the kitchen.
   surroundings: The <em>kitchen</em> is a few steps to your left, while the <em>elevators</em> are a little further down the aisle.
 3:
   name: Elevators
-  description: Three large steel elevators stand before you acting like blurry mirrors.
-  surroundings: A small round <em>button</em> on a metal panel beckons you with a down arrow.
+  description: Three large stainless-steel elevators stand before you acting like blurry mirrors.
+  # surroundings: A small round <em>button</em> on a metal panel beckons you with a down arrow.
+  surroundings: From here you can go back to the <em>front of the room</em> or through the giant tropical plant into the <em>phone booth</em>.
 4:
   name: Back corridor
   description: You walk down the back hallway. You can see some shelves with various office supplies.
-  surroundings: On one side of the hallway, there is a <em>dark room</em> filled with flickering lights. On the other, a service <em>elevator</em>.
-
+  surroundings: On one side of the hallway, there is a <em>dark room</em> filled with flickering lights. On the other, a <em>service elevator</em>.
 5:
   name: Kitchen
   description: To your right, a wall-mounted television presents Anthony Bourdain quietly observing the slaughter of a pig in Tuscany, while on your left a few employees eat their lunch around a large vase of beautiful flowers.
-  surroundings: On a metal ledge, there is a jug of <em>pretzels</em>. Behind you lies the <em>front of the room</em>, where you came from.
+  surroundings: Behind you lies the <em>front of the room</em>, where you came from.
 6:
   name: Phone booth
   description: You pull open a heavy glass door to enter a small semi-soundproof room. The perfect spot to make a phone call if you needed to.
@@ -26,31 +26,48 @@
 7:
   name: Dark room
   description: You push the sliding door to the right and enter a dark room that has floor to ceiling electronics. Random flashes of red, yellow, and orange LEDs and the occasional bleep or bloop leaves you in awe of the technological age we all live in.
-  surroundings: You can go back to the service <em>elevator</em> from here.
+  surroundings: You can go back to the <em>back corridor</em> from here.
   # notes: stomach should grumble here if hungry
 8:
   name: Main elevator
+  surroundings: Back to the hallway with the <em>elevators</em>, Exit on the ground floor out onto <em>16th st.</em>.
 9:
   name: Service elevator
+  surroundings: You can go to the <em>back corridor</em>. Or out on the ground floor into the <em>alley</em>.
 10:
-  name: 5th av. 14th st.
+  name: 14th st
+  surroundings: You can go to <em>15th st.</em>.
 11:
-  name: 5th av. 15th st.
+  name: 15th st
+  surroundings: You can go to <em>14th st.</em> or <em>16th st.</em>
 12:
-  name: 5th av. 16th st.
+  name: 16th st.
+  surroundings: You can go to <em>15th st.</em> or <em>17th st.</em>
 13:
-  name: 5th av. 17th st.
+  name: 17th st.
+  surroundings: You can go to <em>16th st.</em> or <em>18th st.</em> or <em>restaurants</em>.
 14:
-  name: 5th av. 18th st.
+  name: 18th st.
+  surroundings: You can go to <em>17th st.</em>.
   # notes: trying to go north from here you get msg of being too tired to walk that far.
+  # notes: can get cab here
 15:
-  name: Between 5th av. and Broadway on 17th st.
+  name: Restaurants
+  surroundings: Can go back to <em>17th st.</em>.
 16:
   name: "Doctor's office"
+  surroundings: Can go to <em>34th st.</em>.
 17:
   name: Central park
+  surroundings: None
+  # notes: once in park, cant leave and end game begins.
 18:
-  name: 34th street
+  name: 34th st.
+  surroundings: Can go to <em>42nd st.</em>.
 19:
-  name: 42nd street
+  name: 42nd st.
+  surroundings: Can go to <em>central park</em>.
+20:
+  name: alley
+  surroundings: You can go to <em>15th st.</em>.
 
