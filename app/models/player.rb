@@ -9,6 +9,7 @@ class Player < ActiveRecord::Base
     if to_node.try('instance_of?', Node) && node.to_nodes.include?(to_node)
       self.node = to_node
       save!
+      to_node.visited
       to_node.room_description
     end
   end

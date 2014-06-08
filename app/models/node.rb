@@ -29,5 +29,10 @@ class Node < ActiveRecord::Base
   def room_description
     [name, description, surroundings, items_list]
   end
+
+  def visited
+    self.visited_count += 1
+    save
+  end
 end
 

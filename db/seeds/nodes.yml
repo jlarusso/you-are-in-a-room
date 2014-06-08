@@ -2,6 +2,7 @@
   name: Back of the room
   description: You are in a room on the 10th floor of an office building. A few dozen people work quietly around you with their headphones on.
   surroundings: There is an aisle that leads to the <em>front of the room</em>. Further down, you can see a large palm tree towering over elevator doors.<br /> You notice a <em>back corridor</em> that leads to a service elevator.
+  visited_count: 1
 2:
   name: Front of the room
   description: You see more desks with more people quietly working. The smell of fresh watermelon wafts from the kitchen.

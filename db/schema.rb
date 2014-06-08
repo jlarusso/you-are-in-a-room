@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140608225928) do
+ActiveRecord::Schema.define(version: 20140608234120) do
 
   create_table "edges", force: true do |t|
     t.integer  "from_id"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20140608225928) do
     t.datetime "updated_at"
     t.text     "description"
     t.text     "surroundings"
+    t.integer  "visited_count", default: 0
   end
 
   create_table "players", force: true do |t|
