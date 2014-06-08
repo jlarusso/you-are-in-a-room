@@ -5,6 +5,7 @@ class Node < ActiveRecord::Base
   has_many :to_nodes, through: :to_edges
   has_one :player
   has_many :items, as: :owner
+  has_many :verbs
 
   def connect(node)
     to_nodes << node

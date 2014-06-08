@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140601195930) do
+ActiveRecord::Schema.define(version: 20140608225928) do
 
   create_table "edges", force: true do |t|
     t.integer  "from_id"
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20140601195930) do
     t.integer  "item_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "node_id"
+    t.integer  "incremental", default: 0
   end
 
 end

@@ -5,6 +5,7 @@ class @Dispatcher
 
     @dispatcher = new WebSocketRails(url, true)
     @_bindEvents()
+    @_checkForScripting()
 
   # Scroll down to accomodate new output
   reScroll: ->
@@ -19,7 +20,7 @@ class @Dispatcher
     while @$output.find('.hr:first-child').length
       @$output.find('.hr:first-child').remove()
 
-  # Events are triggered on the dispatcher from the websockets connection
+  # Receive broadcasts
   _bindEvents: =>
     @dispatcher.bind 'append_message', @_appendMessage
 
@@ -31,4 +32,9 @@ class @Dispatcher
     @$output.append $("<div class='hr'></div>")
     @pruneParagraphs()
     @reScroll()
+
+  _checkForScripting: ->
+    setInterval (->
+      window.ROOM.dispatcher.dispatcher.trigger 'check_scripts'
+    ), 3000
 
