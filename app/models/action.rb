@@ -12,7 +12,8 @@ class Action
       Verb.create(
         action: 'phone_ring',
         output_text: 'Your cellphone rings loudly on your desk, turning a few heads.',
-        node_id: 1
+        node_id: 1,
+        incremental: 1
       )
       verb.destroy
     end

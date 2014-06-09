@@ -24,8 +24,6 @@ class WebsocketController < WebsocketRails::BaseController
   end
 
   def check_scripts
-    puts Player.first.node.verbs.map(&:action)
-
     Player.first.node.verbs.each { |verb| Action.try(verb.action, verb.id) }
     output = Player.first.node.verbs.map(&:output_text)
 
