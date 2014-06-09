@@ -24,10 +24,13 @@ class WebsocketController < WebsocketRails::BaseController
   end
 
   def check_scripts
-    Player.first.node.verbs.each { |verb| Action.try(verb.action, verb.id) }
+    puts Player.first.node.verbs.map(&:action)
 
-    unless Player.first.node.verbs.empty?
-      broadcast_message :append_message, Player.first.node.verbs.map(&:output_text)
+    Player.first.node.verbs.each { |verb| Action.try(verb.action, verb.id) }
+    output = Player.first.node.verbs.map(&:output_text)
+
+    unless output.compact.empty?
+      broadcast_message :append_message, output
     end
   end
 end

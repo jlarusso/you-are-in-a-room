@@ -1,11 +1,9 @@
 1:
-  name: water
   action: water_plant
   output_text: The soil sucks up the water greedily.
   item_id: 1
 2:
-  name: phone ring
-  action: phone_ring
-  output_text: Your cellphone rings loudly on your desk, turning a few heads.
+  action: phone_starts_ringing
+  output_text: ~
   node_id: 1
 

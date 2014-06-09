@@ -5,6 +5,19 @@ class Action
     item.save
   end
 
+  def self.phone_starts_ringing(verb_id)
+    verb = Verb.find(verb_id)
+    node = verb.node
+    if node.visited_count >= 2
+      Verb.create(
+        action: 'phone_ring',
+        output_text: 'Your cellphone rings loudly on your desk, turning a few heads.',
+        node_id: 1
+      )
+      verb.destroy
+    end
+  end
+
   def self.phone_ring(verb_id)
     verb = Verb.find(verb_id)
 
