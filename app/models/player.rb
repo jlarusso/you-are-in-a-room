@@ -23,4 +23,12 @@ class Player < ActiveRecord::Base
       "You cant find the #{item_name}"
     end
   end
+
+  def inventory
+    if items.empty?
+      ["You don't have anything"]
+    else
+      [items.map(&:name).join(',')]
+    end
+  end
 end

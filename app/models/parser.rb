@@ -13,6 +13,7 @@ class Parser
       case token
       when 'look' then node.room_description
       when 'help' then Parser.help
+      when 'inventory' then Player.first.inventory
       else ["That doesn't make sense."]
       end
     else

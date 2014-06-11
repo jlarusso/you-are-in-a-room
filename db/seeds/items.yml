@@ -2,7 +2,7 @@
   name: plant
   owner_id: 1
   owner_type: Node
-  description: A nice plant, but it looks pretty dry.
+  description: You see a 1 ft tall green money tree with braided stalks.  It looks thirsty.
   gettable: false
 2:
   name: phone
@@ -48,10 +48,10 @@
   gettable: false
   # notes: when shelves are looked, at a new gettable item is created here
 9:
-  name: pretzels
+  name: pretzel
   owner_id: 5
   owner_type: Node
-  description: a jug of pretzels
+  description: a jug of pretzels with only one left.
   gettable: false
   # edible
 

@@ -1,7 +1,7 @@
 1:
   name: water
   action: water_plant
-  output_text: The soil sucks up the water greedily.
+  output_text: Water fills the ceramic pot and slowly starts to seep down into the soil. After watching this happen, a feeling of calm washes over you.
   item_id: 1
 2:
   action: phone_starts_ringing
@@ -10,10 +10,14 @@
 3:
   name: answer
   action: answer_phone
-  output_text: You pick up the phone and answer it. 'Hello?' says a voice. 'This is your doctor.'
+  output_text: ~
   item_id: 2
 4:
   action: email_notification
   output_text: Your computer chimes as a new, unread email appears in your inbox.
   node_id: 1
-
+5:
+  name: use
+  action: dial_doctor
+  output_text: ~
+  item_id: 2

@@ -15,7 +15,10 @@ class Action
         description: 'The email is from your doctor; it is labeled urgent.',
         gettable: false
       )
-      i.verbs << Verb.create(name: 'read', action: 'read_email', output_text: 'you read it')
+      i.verbs << Verb.create(name: 'read',
+                             action: 'read_email',
+                             output_text: "I'm sorry to be the one to bring you this information, but the results of your last test have come back conclusive. Your hallucinations are coming from an abnormal brain structure. We are frankly surprised that you are conscious at all. Please call us immediately. - Docter Graves P.S. Happy Earth Day!"
+                            )
       verb.destroy
     else
       verb.incremental += 1
@@ -55,8 +58,17 @@ class Action
   end
 
   def self.answer_phone(verb_id)
-    item = Verb.find(verb_id).item
-    item.owner = Player.first
-    item.save
+    # item = Verb.find(verb_id).item
+    # item.owner = Player.first
+    # item.save
+    dial_doctor(verb_id)
+  end
+
+  def self.dial_doctor(verb_id)
+    if Player.first.node.id == 6
+      "A nurse answers the phone and awkwardly passes it off to the doctor. Dr. Graves informs you that you will rapidly go insane. He recommends that you do what matters to you most during the time you have left."
+    else
+      "It might seem rude to start a phone call in the middle of the office. Maybe there is a room that is a little more private."
+    end
   end
 end
