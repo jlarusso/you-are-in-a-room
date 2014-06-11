@@ -36,5 +36,5 @@ class @Dispatcher
   _checkForScripting: ->
     setInterval (->
       window.ROOM.dispatcher.dispatcher.trigger 'check_scripts'
-    ), 5000
+    ), 3000
 

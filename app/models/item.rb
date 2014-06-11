@@ -19,7 +19,7 @@ class Item < ActiveRecord::Base
     else
       verb = Verb.find_by(name: verb_name)
       if verbs.include? verb
-        Action.send(verb.action, verb.id)
+        Action.send(verb.action, verb.id) if verb.action
         verb.output_text
       else
         "You can't do that"
