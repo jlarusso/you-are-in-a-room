@@ -1,7 +1,5 @@
 # you-are-in-a-room
 
-### story
-
 ### what is a text-adventure game?
 
 ### rooms -> directed graph
